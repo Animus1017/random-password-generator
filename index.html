@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/9c67facb22.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="bg-mainbg m-0 p-0 box-border w-screen h-screen overflow-x-hidden flex justify-center items-center">
+        <div class="flex flex-col gap-5">
+            <h1 class="text-white opacity-75 text-center font-bold tracking-wider text-3xl">PASSWORD GENERATOR</h1>
+            <div class="flex justify-between items-center bg-[#160628] py-6 px-5 rounded-2xl border-[#58077d] border-b-[6px]">
+                <input display readonly type="text" placeholder="PASSWORD" class="text-[#ffe53d] font-bold text-2xl bg-transparent w-full border-none outline-none placeholder:text-[#ffe53d] placeholder:font-bold placeholder:text-2xl placeholder:opacity-50">
+                <button class="relative copybtn" >
+                    <span copymsg class="text-[#ffe53d] bg-[#871c9c] rounded-xl font-bold px-1 py-[2px] absolute -top-10 -left-5 opacity-0 transition-all duration-200">Copied</span>
+                    <i class="fa-regular fa-clone fa-rotate-180 text-xl text-[#6cf9f2]"></i>
+                </button>
+            </div>
+            <div class="flex flex-col gap-6 bg-[#160628] p-7 rounded-2xl border-[#58077d] border-b-[6px]">
+                <div class="flex justify-between items-center">
+                    <p class="text-white text-xl">Password Length</p>
+                    <span class="text-[#ffe53d] font-bold text-xl" pl>10</wspan>
+                </div>
+                <input slider type="range" min="0" max="20" step="1" class="cursor-pointer thumb appearance-none bg-[#341c4f] bg-sliderbg bg-no-repeat rounded-full focus:border-[3px] focus:border-[#ffe53d] h-[14px]">
+                <div class="flex flex-col gap-2">
+                    <div class="flex gap-3 items-center">
+                        <input check1 type="checkbox" id="uppercase" class="cursor-pointer relative appearance-none border-2 border-[#6cf9f2] w-5 h-5 rounded-md checked:bg-[#6cf9f2] transition-all duration-100 before:checked:content-['✔'] before:checked:absolute before:checked:-top-[40%] before:checked:-left-[1px]">
+                        <label for="uppercase" class="text-white text-xl">Include Uppercase Letters</label>
+                    </div>
+                    <div class="flex gap-3 items-center">
+                        <input check2 type="checkbox" id="lowercase" class="cursor-pointer relative appearance-none border-2 border-[#6cf9f2] w-5 h-5 rounded-md checked:bg-[#6cf9f2] transition-all duration-100 before:checked:content-['✔'] before:checked:absolute before:checked:-top-[40%] before:checked:-left-[1px]">
+                        <label for="lowercase" class="text-white text-xl">Include Lowercase Letters</label>
+                    </div>
+                    <div class="flex gap-3 items-center">
+                        <input check3 type="checkbox" id="nos" class="cursor-pointer relative appearance-none border-2 border-[#6cf9f2] w-5 h-5 rounded-md checked:bg-[#6cf9f2] transition-all duration-100 before:checked:content-['✔'] before:checked:absolute before:checked:-top-[40%] before:checked:-left-[1px]">
+                        <label for="nos" class="text-white text-xl">Include Numbers</label>
+                    </div>
+                    <div class="flex gap-3 items-center">
+                        <input check4 type="checkbox" id="symbol" class="cursor-pointer relative appearance-none border-2 border-[#6cf9f2] w-5 h-5 rounded-md checked:bg-[#6cf9f2] transition-all duration-100 before:checked:content-['✔'] before:checked:absolute before:checked:-top-[40%] before:checked:-left-[1px]">
+                        <label for="symbol" class="text-white text-xl">Include Symbols</label>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center">
+                    <p class="text-white text-xl">Strength</p>
+                    <div class="w-5 h-5 rounded-full bg-[#ccc] shadow-[0_0_12px_1px_#ccc]" indicator></div>
+                </div>
+                <button genbtn class="rounded-xl border-[#ffe53d] border-b-[6px] bg-[#bc15f4] text-[#ffe53d] text-xl font-semibold py-2">GENERATE PASSWORD</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
