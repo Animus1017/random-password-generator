@@ -4,8 +4,11 @@
   "description": "tailwind",
   "main": "index.js",
   "scripts": {
-    "start": "npm install",
-    "build": "npm run build"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "vercel-build": "prisma generate && prisma migrate deploy && next build",
+    "prisma:generate": "prisma generate"
   },
   "author": "",
   "license": "ISC",
